@@ -1,0 +1,16 @@
+
+<div>
+    <lift:LoginStatus.ifLoggedIn>
+    <p>Logged in as <lift:LoginStatus.username/></p>
+    <p><a href="/logout">Logout</a></p>
+    </lift:LoginStatus.ifLoggedIn>
+
+    <lift:LoginStatus.ifLoggedOut>
+    <p><a class="lift:LoginLink" href="#">Login</a></p>
+    </lift:LoginStatus.ifLoggedOut>
+
+    <h3>Places</h3>
+    <lift:Menu.builder/>
+    <lift:msgs/>
+</div>
+

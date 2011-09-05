@@ -1,7 +1,8 @@
+
 import sbt._
 
 class LiftProject(info: ProjectInfo) extends DefaultWebProject(info) {
-  val liftVersion = "2.3"
+  val liftVersion = "2.4-M3"
 
   // uncomment the following if you want to use the snapshot repo
   // val scalatoolsSnapshot = ScalaToolsSnapshots
@@ -14,10 +15,13 @@ class LiftProject(info: ProjectInfo) extends DefaultWebProject(info) {
 
   override def libraryDependencies = Set(
       "net.liftweb" %% "lift-webkit" % liftVersion % "compile->default",
+      "net.liftweb" % "lift-openid_2.9.0" % "2.4-M3", // Why no work??
       "org.mortbay.jetty" % "jetty" % "6.1.22" % "test->default",
       "junit" % "junit" % "4.5" % "test->default",
-      "org.scala-tools.testing" %% "specs" % "1.6.6" % "test->default",
-   // "ch.qos.logback" % "logback-classic" % "0.9.28"
-      "org.slf4j" % "slf4j-simple" % "1.6.1"
+      "org.scala-tools.testing" %% "specs" % "1.6.8" % "test->default",
+      "org.slf4j" % "slf4j-simple" % "1.6.1",
+      //"org.xerial.thirdparty" % "sqlitejdbc-nested" % "3.6.2"
+      "com.h2database" % "h2" % "1.3.159"
 ) ++ super.libraryDependencies
 }
+

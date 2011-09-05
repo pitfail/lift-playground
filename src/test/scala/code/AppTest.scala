@@ -1,11 +1,11 @@
 package code
 
-import _root_.java.io.File
-import _root_.junit.framework._
+import java.io.File
+import junit.framework._
 import Assert._
-import _root_.scala.xml.XML
-import _root_.net.liftweb.util._
-import _root_.net.liftweb.common._
+import scala.xml.XML
+import net.liftweb.util._
+import net.liftweb.common._
 
 object AppTest {
   def suite: Test = {
