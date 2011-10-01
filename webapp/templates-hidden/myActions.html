@@ -1,0 +1,78 @@
+
+<lift:children>
+
+    <h3>Make a Trade</h3>
+    
+    <h4>Buy stock:</h4>
+    <lift:BuyStock form="post">
+        <table class="buyStock">
+            <tr>
+                <td>Ticker:</td>
+                <td><input name="ticker" type="text"/></td>
+                <td>(<a href="???">lookup</a>)</td>
+                <td><span id="tickerError"/></td>
+            </tr>
+            <tr>
+                <td>Volume:</td>
+                <td>$<input name="volume" type="text"/></td>
+                <td></td>
+                <td><span id="volumeError"/></td>
+            </tr>
+            <tr><td><input value="Buy" name="submit" type="submit"/></td></tr>
+        </table>
+        <p><span id="submitError"/></p>
+    </lift:BuyStock>
+    <h4>Sell derivative:</h4>
+    <lift:SellDerivative form="post">
+        <table class="sellDerivative">
+            <tr>
+                <td>To:</td>
+                <td>
+                    <ul>
+                        <li id="to_case_user">
+                            <input type="radio" id="user"/> User: <input type="text" name="recipient"/>
+                        </li>
+                        <li id="to_case_auction">
+                            <input type="radio" id="auction"/> Auction
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Securities:</td>
+                <td>
+                    <ul>
+                        <li id="securities">
+                            <input type="text" name="ticker"/>
+                            <input type="text" name="shares"/>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <input type="submit" name="securitiesAdd" value="Add"/>
+                </td>
+            </tr>
+            <tr>
+                <td>On:</td>
+                <td>
+                    <input type="text" name="on"/>
+                </td>
+            </tr>
+            <tr>
+                <td>If:</td>
+                <td>
+                    <ul>
+                        <li id="cond_case_always">
+                            <input type="radio" id="always"/> Always
+                        </li>
+                        <li id="cond_case_when">
+                            <input type="radio" id="if_case_when"/>When:
+                                blah
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </lift:SellDerivative>
+</lift:children>
+

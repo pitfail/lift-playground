@@ -1,0 +1,27 @@
+
+<lift:children>
+
+<lift:Portfolio.ifHaveDerivativeAssets>
+<table class="derivativesTable">
+    <tr>
+        <th>Securities</th>
+        <th>Exec Date</th>
+        <th>Condition</th>
+        <th>Peer</th>
+    </tr>
+    <tr class="lift:Portfolio.derivativeAssets" id="derivativeAsset">
+        <td id="securities"/>
+        <td id="exec"/>
+        <td id="condition"/>
+        <td id="peer"><lift:UserLink user="blank"/></td>
+    </tr>
+</table>
+</lift:Portfolio.ifHaveDerivativeAssets>
+
+
+<lift:Portfolio.ifNoDerivativeAssets>
+<p>You have no derivatives</p>
+</lift:Portfolio.ifNoDerivativeAssets>
+
+</lift:children>
+

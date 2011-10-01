@@ -1,0 +1,33 @@
+
+<lift:children>
+
+<h3>Your Portfolio</h3>
+
+<table class="tChart">
+    <col class="left"/>
+    <col class="right"/>
+    <tr class="header">
+        <th>Assets</th>
+        <th>Liabilities</th>
+    </tr>
+    <tr>
+        <td class="assets">
+            <h4>Cash</h4>
+            <p class="lift:Portfolio.cash"></p>
+            
+            <br/>
+            <h4>Stocks</h4>
+            <lift:embed what="myStocks"/>
+
+            <br/>
+            <h4>Derivatives</h4>
+            <lift:embed what="myDerivatives"/>
+        </td>
+        <td class="liabilities">
+            (Liabilities)
+        </td>
+    </tr>
+</table>
+
+</lift:children>
+
