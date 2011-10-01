@@ -8,7 +8,7 @@ Building
 
 To build and test the application,
 
-    ./sbt update `~jetty-restart`
+    ./sbt update `~jetty-run`
 
 You can now access it at [http://localhost:8080/](http://localhost:8080/).
 
